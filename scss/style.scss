@@ -1,0 +1,281 @@
+@import "../bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+/* Color Veriables */
+
+$green-clr:#1a7941;
+$orange-clr:#E06C17;
+$dark-orange:#de432a;
+body {
+    font-family: 'Zilla Slab', serif;
+}
+
+.head-top {
+    padding: 10px 0;
+    background-image: linear-gradient(to bottom, #fff2c9, #eaffd7);
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .right-panel {
+            display: flex;
+            .dropdown {
+                .btn {
+                    background-color: $orange-clr;
+                    color: $white;
+                }
+            }
+            .form-inline {
+                .form-control {
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                .btn {
+                    background-color: $green-clr;
+                    color: $white;
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+        }
+    }
+}
+
+nav {
+    background-color: $green-clr;
+    padding: 0 !important;
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: $white;
+                padding: 15px;
+                font-size: 18px;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    color: $white;
+                    background-color: $orange-clr;
+                }
+            }
+            &.active {
+                .nav-link {
+                    color: $white;
+                    background-color: $orange-clr;
+                }
+            }
+        }
+    }
+}
+
+.homeslider {
+    .carousel-item {
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-caption {
+            text-align: left;
+            top: 30%;
+            h2 {
+                font-weight: 700;
+                font-size: 40px;
+            }
+            p {
+                font-size: 24px;
+                font-weight: 300;
+            }
+            .btn {
+                color: $white;
+                background-color: $orange-clr;
+                text-transform: uppercase;
+                transition: all 0.5s ease-in-out;
+                &:hover {
+                    opacity: 0.8;
+                }
+                i {
+                    font-size: 13px;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    background: url(../images/banner.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    min-height: 350px;
+    padding: 20px 0;
+    align-items: center;
+    color: $white;
+    &::before {
+        content: "";
+        position: absolute;
+        background-color: rgba($color: #000000, $alpha: 0.7);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+        h2 {
+            font-weight: 700;
+            font-size: 3rem;
+        }
+        .btn {
+            background-color: $orange-clr;
+            color: $white;
+        }
+    }
+}
+
+.donation-block {
+    background-color: $orange-clr;
+    color: $white;
+    .container {
+        display: flex;
+        h2 {
+            b {
+                background-color: $dark-orange;
+                padding: 2px 15px;
+                border-radius: 5px;
+            }
+        }
+        h4 {
+            border-left: 1px solid rgba($color: $black, $alpha: 0.2);
+            border-right: 1px solid rgba($color: $black, $alpha: 0.2);
+            margin: 0 20px 0 10px;
+            padding: 0 15px;
+            text-align: center;
+            align-self: center;
+        }
+        .btn {
+            background-color: #222;
+            color: $white;
+            align-self: center;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 10px 20px;
+            box-shadow: 1px 1px 4px rgba($color: $white, $alpha: 0.4);
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+.president-info {
+    padding: 50px 0;
+    color: #333;
+    img {
+        max-width: 100%;
+    }
+    h3 {
+        font-weight: 700;
+        margin: 15px 0;
+        color: $dark-orange;
+        b {
+            font-size: 14px;
+            color: #666;
+            display: block;
+        }
+    }
+    h4 {
+        font-weight: 700;
+        color: $green-clr;
+        margin-top: 5px;
+    }
+    h2 {
+        font-weight: 700;
+    }
+}
+
+.president-adrs {
+    background-color: $green-clr;
+    padding: 40px 0;
+    color: $white;
+    h2 {
+        font-weight: 700;
+    }
+}
+
+.news-sec {
+    padding: 50px 0;
+    h2 {
+        font-weight: 700;
+        margin-bottom: 30px;
+        a {
+            color: $orange-clr;
+            font-size: 16px;
+            float: right;
+            margin-top: 8px;
+            i {
+                font-size: 11px;
+            }
+        }
+    }
+    .col-md-3 {
+        background-color: rgba($color: $black, $alpha: 0.05);
+        padding: 25px;
+        border-right: 1px solid rgba($color: $black, $alpha: 0.1);
+        &:last-child {
+            border: none;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: $green-clr;
+        }
+        p {
+            color: #666;
+        }
+        .btn {
+            background-color: $dark-orange;
+            color: $white;
+            padding: 5px 10px;
+            font-size: 13px;
+            transition: all 0.5s ease-in-out;
+            &:hover {
+                background-color: $orange-clr;
+            }
+        }
+    }
+}
+
+footer {
+    background-color: $green-clr;
+    color: $white;
+    padding: 20px 0;
+    h3 {
+        font-size: 24px;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+            margin: 3px 0;
+            a {
+                color: $white;
+            }
+        }
+    }
+    .scl {
+        a {
+            font-size: 24px;
+            color: $white;
+            margin-right: 8px;
+        }
+    }
+    hr {
+        background-color: rgba($color: $white, $alpha: 0.4);
+        margin: 30px 0;
+    }
+}
