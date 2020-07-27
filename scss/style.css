@@ -10826,8 +10826,12 @@ body {
 
 .head-top {
   padding: 10px 0;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff2c9), to(#eaffd7));
-  background-image: linear-gradient(to bottom, #fff2c9, #eaffd7);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#cd9f15), to(#336600));
+  background-image: linear-gradient(to bottom, #cd9f15 0%, #336600 100%);
+}
+
+.head-top .brand img {
+  height: 100px;
 }
 
 .head-top .container {
@@ -10848,21 +10852,27 @@ body {
   display: flex;
 }
 
-.head-top .container .right-panel .dropdown .btn {
+.head-top .container .right-panel .login {
   background-color: #E06C17;
   color: #fff;
+  margin-left: 10px;
+}
+
+.head-top .container .right-panel .form-inline {
+  position: relative;
 }
 
 .head-top .container .right-panel .form-inline .form-control {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
+  padding-right: 30px;
 }
 
 .head-top .container .right-panel .form-inline .btn {
-  background-color: #1a7941;
-  color: #fff;
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
+  color: #E06C17;
+  background-color: none;
+  border: none;
+  position: absolute;
+  right: 0;
+  padding: 6px;
 }
 
 nav {
@@ -10872,8 +10882,8 @@ nav {
 
 nav .navbar-nav .nav-item .nav-link {
   color: #fff;
-  padding: 15px;
-  font-size: 18px;
+  padding: 12px;
+  font-size: 16px;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }

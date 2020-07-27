@@ -12,29 +12,35 @@ body {
 
 .head-top {
     padding: 10px 0;
-    background-image: linear-gradient(to bottom, #fff2c9, #eaffd7);
+    background-image: linear-gradient(to bottom, #cd9f15 0%, #336600 100%);
+    .brand {
+        img {
+            height: 100px;
+        }
+    }
     .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         .right-panel {
             display: flex;
-            .dropdown {
-                .btn {
-                    background-color: $orange-clr;
-                    color: $white;
-                }
+            .login {
+                background-color: $orange-clr;
+                color: $white;
+                margin-left: 10px;
             }
             .form-inline {
+                position: relative;
                 .form-control {
-                    border-top-right-radius: 0px;
-                    border-bottom-right-radius: 0px;
+                    padding-right: 30px;
                 }
                 .btn {
-                    background-color: $green-clr;
-                    color: $white;
-                    border-top-left-radius: 0px;
-                    border-bottom-left-radius: 0px;
+                    color: $orange-clr;
+                    background-color: none;
+                    border: none;
+                    position: absolute;
+                    right: 0;
+                    padding: 6px;
                 }
             }
         }
@@ -48,8 +54,8 @@ nav {
         .nav-item {
             .nav-link {
                 color: $white;
-                padding: 15px;
-                font-size: 18px;
+                padding: 12px;
+                font-size: 16px;
                 transition: all 0.5s ease-in-out;
                 &:hover {
                     color: $white;
